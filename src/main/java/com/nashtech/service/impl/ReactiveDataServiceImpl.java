@@ -34,7 +34,7 @@ public class ReactiveDataServiceImpl implements
     @KafkaListener(topics = "eventhub", groupId = "elasticsearch", concurrency = "2")
     public void carNotificationConsumer(Car event) {
         kafkaConsumerRepository.save(event);
-        log.info("Books event received for notification => {}", event);
+        log.info("Cars event received for notification => {}", event);
     }
 
 }
